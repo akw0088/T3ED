@@ -1,0 +1,1786 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Deutsch (Deutschland) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_LOD_STARTEND DIALOG DISCARDABLE  0, 0, 157, 103
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "T3ED : LOD Generator"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,20,80,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,85,80,50,14
+    RTEXT           "Start Block :",IDC_STATIC,25,20,43,13
+    RTEXT           "End Block :",IDC_STATIC,30,40,38,13
+    EDITTEXT        IDC_EDITSTART,75,20,48,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITEND,75,40,48,14,ES_AUTOHSCROLL
+    LTEXT           "Gererates low and medium meshes. Fixes the rearview mirror problem.",
+                    IDC_STATIC,6,0,145,20
+    CTEXT           "Save track before starting !",IDC_STATIC,5,60,150,10
+END
+
+IDD_Expand DIALOG DISCARDABLE  0, 0, 192, 121
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "T3ED - Expand - Shrink Objects"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,15,100,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,120,100,50,14
+    EDITTEXT        IDC_EDITX,49,20,41,15,ES_AUTOHSCROLL
+    GROUPBOX        "Enter Object size multiplier ",IDC_STATIC,5,5,95,90
+    RTEXT           "X - axis : ",IDC_STATIC,10,20,40,15,SS_CENTERIMAGE
+    RTEXT           "Y - axis : ",IDC_STATIC,10,38,40,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDITY,50,38,40,15,ES_AUTOHSCROLL | WS_DISABLED
+    RTEXT           "Z - axis : ",IDC_STATIC,10,57,40,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDITZ,50,57,40,14,ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "Connect axis",IDC_CHECK_CONNECT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,20,80,70,10
+    GROUPBOX        "Alignment ",IDC_STATIC,110,5,75,90
+    CONTROL         "Top",IDC_RADIOTOP,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,120,30,50,10
+    CONTROL         "Middle",IDC_RADIOMIDDLE,"Button",BS_AUTORADIOBUTTON,120,
+                    45,50,10
+    CONTROL         "Bottom",IDC_RADIOBOTTOM,"Button",BS_AUTORADIOBUTTON,120,
+                    60,50,10
+END
+
+IDD_EXPANDBLOCK DIALOG DISCARDABLE  0, 0, 152, 126
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "T3ED : Expand Block"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,15,100,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,85,100,50,14
+    GROUPBOX        "Enter Object size multiplier ",IDC_STATIC,5,5,140,85
+    EDITTEXT        IDC_EDITLENGTH,89,20,41,15,ES_AUTOHSCROLL
+    RTEXT           "Length of block : ",IDC_STATIC,15,20,70,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EDITWIDTH,89,40,41,15,ES_AUTOHSCROLL
+    RTEXT           "Width of block : ",IDC_STATIC,15,40,70,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EDITHEIGHT,89,60,41,15,ES_AUTOHSCROLL
+    RTEXT           "Height of block : ",IDC_STATIC,15,60,70,15,
+                    SS_CENTERIMAGE
+END
+
+IDD_BLOCK_PROPS DIALOG DISCARDABLE  0, 0, 262, 135
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "T3ED : Block properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,45,110,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,161,110,50,14
+    RTEXT           "ptCentre  X :",IDC_STATIC,5,5,49,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_X,66,5,54,15,ES_AUTOHSCROLL | WS_DISABLED | NOT 
+                    WS_TABSTOP
+    EDITTEXT        IDC_EDIT_Y,136,5,48,15,ES_AUTOHSCROLL | WS_DISABLED | 
+                    NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_Z,200,5,48,15,ES_AUTOHSCROLL | WS_DISABLED | 
+                    NOT WS_TABSTOP
+    RTEXT           "Y :",IDC_STATIC,120,5,10,12,SS_CENTERIMAGE
+    RTEXT           "Z :",IDC_STATIC,184,5,10,12,SS_CENTERIMAGE
+    GROUPBOX        "Vertices ",IDC_STATIC,5,25,250,55
+    LTEXT           "Static",IDC_STATIC,111,6,19,8
+    EDITTEXT        IDC_EDIT_NVERTICES,87,35,37,15,ES_AUTOHSCROLL | 
+                    WS_DISABLED | NOT WS_TABSTOP
+    RTEXT           "nVertices : ",IDC_STATIC,15,35,58,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_NMEDVERT,87,55,37,15,ES_AUTOHSCROLL | 
+                    WS_DISABLED | NOT WS_TABSTOP
+    RTEXT           "nMedResVert : ",IDC_STATIC,15,55,58,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_NHIGHVERT,210,35,37,15,ES_AUTOHSCROLL | 
+                    WS_DISABLED | NOT WS_TABSTOP
+    RTEXT           "nHiResVert : ",IDC_STATIC,138,35,58,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_NLOWVERT,210,55,37,15,ES_AUTOHSCROLL | 
+                    WS_DISABLED | NOT WS_TABSTOP
+    RTEXT           "nLowResVert : ",IDC_STATIC,138,55,58,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_NSOUNDSRC,210,85,37,15,ES_AUTOHSCROLL | 
+                    WS_DISABLED | NOT WS_TABSTOP
+    RTEXT           "Number of Lights : ",IDC_STATIC,10,85,76,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_NLIGHTSRC,88,85,37,15,ES_AUTOHSCROLL | 
+                    WS_DISABLED | NOT WS_TABSTOP
+    RTEXT           "Number of Sounds : ",IDC_STATIC,132,85,76,15,
+                    SS_CENTERIMAGE
+END
+
+IDD_FILE_PROPERTIES DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "T3ED: Frd file properies"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,67,70,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,135,80,50,14,NOT WS_VISIBLE
+    RTEXT           "FIle format :",IDC_TXT_FILE_FORMAT,10,5,85,15,
+                    SS_CENTERIMAGE
+    RTEXT           "Number of Blocks:",IDC_TXT_NBLOCKS,10,25,85,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_FILE_FORMAT,105,5,55,15,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_NBLOCKS,105,25,55,15,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    RTEXT           "Lenght of vRoad :",IDC_TXT_NBLOCKS2,10,45,85,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_NVROAD,105,45,55,15,ES_AUTOHSCROLL | 
+                    ES_READONLY
+END
+
+IDD_VROAD_HEIGHTS_SPDFILES DIALOG DISCARDABLE  0, 0, 497, 166
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "T3ED : Virtual Road, Heights.sim"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,189,145,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,259,145,50,14
+    CONTROL         "List3",IDC_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_EDITLABELS | WS_BORDER | 
+                    WS_TABSTOP,10,25,475,115
+    CONTROL         "View VRoad",IDC_CHECK_VROAD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,5,108,15
+    CONTROL         "View heights.sim",IDC_CHECK_HEIGHTS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,131,5,108,15
+    CONTROL         "View spdFA.bin",IDC_CHECK_SPDFA,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,252,5,108,15
+    CONTROL         "View spdRA.bin",IDC_CHECK_SPDRA,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,373,5,108,15
+END
+
+IDD_FINDPOLYGON DIALOG DISCARDABLE  0, 0, 277, 210
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "T3ED : Find polygon"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,60,185,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,170,185,50,14
+    CONTROL         "Actual block only",IDC_BLOCK_RADIO1,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,15,15,80,15
+    CONTROL         "from block ",IDC_BLOCK_RADIO2,"Button",
+                    BS_AUTORADIOBUTTON,101,15,50,15
+    EDITTEXT        IDC_EDIT_STARTBL,155,15,35,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ENDBL,215,15,35,15,ES_AUTOHSCROLL
+    CTEXT           "to",IDC_STATIC,191,15,15,15,SS_CENTERIMAGE
+    GROUPBOX        "Where to search",IDC_STATIC,5,5,260,80
+    CONTROL         "Trackpolygons",IDC_CHECK_TRACK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,35,70,15
+    CONTROL         "Polygon objects",IDC_CHECK_POLYOBJ,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,97,35,70,15
+    CONTROL         "Extra objects",IDC_CHECK_EXTRAOBJ,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,179,35,70,15
+    EDITTEXT        IDC_EDIT_TEXTURE,81,105,40,15,ES_AUTOHSCROLL
+    GROUPBOX        "Search for ",IDC_STATIC,5,90,260,90
+    PUSHBUTTON      "Select",IDC_BUTTON_SELECT_TEXTURE,135,105,45,15,
+                    BS_VCENTER
+    CONTROL         "Texture :",IDC_CHECK_TEXTURE,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFT | BS_VCENTER | WS_TABSTOP,25,105,45,15
+    CONTROL         "NFS HS texture properties.",IDC_CHECK_HSTEXTURE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,125,100,15
+    CONTROL         "Animated textures",IDC_CHECK_ANIMATED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,135,125,85,15
+    CONTROL         "Polygon Road Flags",IDC_CHECK_PVRFLAGS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,155,105,15
+    PUSHBUTTON      "Select",IDC_BUTTON_SELECT_PVRFLAGS,135,155,45,15,
+                    BS_VCENTER
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_LOD_STARTEND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 150
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 96
+        HORZGUIDE, 31
+        HORZGUIDE, 35
+    END
+
+    IDD_Expand, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 185
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_EXPANDBLOCK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 145
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 119
+    END
+
+    IDD_BLOCK_PROPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 255
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_FILE_PROPERTIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_VROAD_HEIGHTS_SPDFILES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 490
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_FINDPOLYGON, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 270
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Deutsch (Deutschland) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Englisch (USA) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ROTATE DIALOG DISCARDABLE  0, 0, 186, 61
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "T3ED : Rotate"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,15,40,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,120,40,50,14
+    RTEXT           "Rotate object with an angle of : ",IDC_RTEXT,5,5,115,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_ANGLE,125,5,40,14,ES_AUTOHSCROLL
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 217, 170
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About T3ED"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
+    LTEXT           "T3ED Plus Dev4.0 \n( t3ed version 0.07 pre 1.1 H-1f dev4.0)",
+                    IDC_STATIC,32,7,147,20,SS_NOPREFIX,WS_EX_TRANSPARENT
+    LTEXT           "Copyright (C) Denis Auroux, 1998-99",IDC_COPYRIGHT,7,34,
+                    126,8,0,WS_EX_TRANSPARENT
+    DEFPUSHBUTTON   "OK",IDOK,167,144,43,19,WS_GROUP
+    LTEXT           "e-mail: auroux@math.polytechnique.fr",IDC_STATIC,32,44,
+                    134,10,0,WS_EX_TRANSPARENT
+    LTEXT           "http://www.math.polytechnique.fr/cmat/auroux/nfs/",
+                    IDC_STATIC,32,54,178,10,0,WS_EX_TRANSPARENT
+    LTEXT           "Direct 3D preview by Hoo",IDC_COPYRIGHT2,7,66,126,8,0,
+                    WS_EX_TRANSPARENT
+    LTEXT           "email: khchua0@prodigy.net",IDC_STATIC,32,76,134,10,0,
+                    WS_EX_TRANSPARENT
+    LTEXT           "http://pages.prodigy.net/khchua0/",IDC_STATIC,32,86,178,
+                    10,0,WS_EX_TRANSPARENT
+    LTEXT           "Plus Edition (C) 2001-2004 by ",IDC_COPYRIGHT3,7,105,97,
+                    9,0,WS_EX_TRANSPARENT
+    CONTROL         "http://rp-design.totalnfs.net",IDC_STATIC_URL,"Static",
+                    SS_LEFTNOWORDWRAP | SS_NOTIFY | NOT WS_VISIBLE | 
+                    WS_GROUP,140,100,70,12,WS_EX_DLGMODALFRAME | 
+                    WS_EX_TRANSPARENT
+    LTEXT           "- Vitaly Kootin aka. Necromancer",IDC_COPYRIGHT4,32,124,
+                    111,9,0,WS_EX_TRANSPARENT
+    LTEXT           "- Lasse Kärkkäinen aka. Nappe1",IDC_STATIC,32,114,105,8
+    LTEXT           "Dev 3.3 - 4.0 by JimDiabolo",IDC_COPYRIGHT5,10,140,143,
+                    9,0,WS_EX_TRANSPARENT
+END
+
+IDD_TRKBLOCK_DIALOG DIALOGEX 0, 0, 222, 159
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "T3ED : Track Block Neighbours"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,115,134,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,50,134,50,14
+    EDITTEXT        IDC_NEIGHBOUR_EDIT1,34,6,46,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_NEIGHBOUR_EDIT2,34,23,46,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_NEIGHBOUR_EDIT3,34,41,46,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_NEIGHBOUR_EDIT4,87,6,45,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_NEIGHBOUR_EDIT5,87,23,45,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_NEIGHBOUR_EDIT6,87,41,45,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_NEIGHBOUR_EDIT7,139,6,48,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_NEIGHBOUR_EDIT8,139,23,47,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Add here numbers of track blocks directly connected to the selected block. For empty entry, leave ""-1"". Remember that at least Next and previous blocks must be here.",
+                    IDC_STATIC,18,58,184,29
+    CONTROL         "Connect close points to near points of neighbour blocks",
+                    IDC_CHECK_MERGE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,
+                    94,191,15
+    RTEXT           "if distance is less than : ",IDC_STATIC,40,110,80,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_DIST,125,110,40,15,ES_AUTOHSCROLL
+END
+
+IDD_LSPROPS DIALOG DISCARDABLE  0, 0, 186, 146
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "T3ED : Light and Sound Source Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,35,125,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,100,125,50,14
+    RTEXT           "Type :",IDC_STATIC,20,62,50,15
+    EDITTEXT        IDC_EDIT1,75,60,89,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,75,80,90,14,ES_UPPERCASE | WS_DISABLED | NOT 
+                    WS_TABSTOP
+    LTEXT           "Set Light or Sound Source data here. Lower Field shows value in Hexadecimal system.",
+                    IDC_TEXT1,5,5,170,35
+    RTEXT           "Type (HEX) :",IDC_STATIC,15,82,55,15
+    RTEXT           "Belongs to block :",IDC_STATIC,10,41,60,15
+    EDITTEXT        IDC_EDIT_BLOCK,75,40,45,15,ES_AUTOHSCROLL | WS_DISABLED | 
+                    NOT WS_TABSTOP
+END
+
+IDD_LOD_GENERATION DIALOG DISCARDABLE  0, 0, 252, 23
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Please Wait while generating... (0 of nBlocks)"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Progress1",IDC_PROGRESS2,"msctls_progress32",WS_BORDER,
+                    2,1,246,17
+END
+
+IDD_RAYTRACE DIALOG DISCARDABLE  0, 0, 257, 149
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "T3ED : Shadow Ray Tracer"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,57,128,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,154,128,50,14
+    EDITTEXT        IDC_EDIT1,45,20,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,46,52,40,14,ES_AUTOHSCROLL
+    CTEXT           "Sun Theta (try sun values from tr.ini) :",IDC_STATIC,7,
+                    7,128,8
+    CTEXT           "Sun Rho (try values close to 1) :",IDC_STATIC,7,41,123,
+                    8
+    CTEXT           "Start at block number :",IDC_STATIC,143,7,106,8
+    EDITTEXT        IDC_EDIT3,176,20,40,14,ES_AUTOHSCROLL
+    CTEXT           "End at block number :",IDC_TEXT_ENDBL,147,41,103,8
+    EDITTEXT        IDC_EDIT4,176,52,40,14,ES_AUTOHSCROLL
+    CONTROL         "Track Polygons",IDC_CHECKTrack,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,111,78,94,8
+    CONTROL         "Objects",IDC_CHECKObjects,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,111,92,102,14
+    CONTROL         "Extra Objects",IDC_CHECKExtraObjects,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,111,110,120,
+                    15
+    LTEXT           "Raytrace shadows for :",IDC_STATIC,18,78,86,11
+END
+
+IDD_SMOOTHING1 DIALOG DISCARDABLE  0, 0, 186, 103
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Smoothing properties - Block mode"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,28,81,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,94,81,50,14
+    LTEXT           "Width of zone to move :",IDC_SMOOTH1_STATIC1,17,10,78,8
+    LTEXT           "nodes",IDC_SMOOTH1_STATIC2,146,10,20,8
+    LTEXT           "Width of smoothing zone :",IDC_STATIC,17,30,84,8
+    LTEXT           "nodes",IDC_STATIC,146,30,20,8
+    LTEXT           "(1 block = 8 nodes)",IDC_STATIC,116,46,63,9
+    CONTROL         "Extra smoothing",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,59,74,13
+    LTEXT           "Width of zone to move :",IDC_SMOOTH1_STATIC3,17,10,78,8,
+                    WS_DISABLED
+    LTEXT           "nodes",IDC_SMOOTH1_STATIC4,146,10,20,8,WS_DISABLED
+    COMBOBOX        IDC_EDIT2,103,28,38,48,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_EDIT1,103,8,38,48,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+IDD_SMOOTHING2 DIALOG DISCARDABLE  0, 0, 180, 86
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Smoothing properties - Ext. Point mode"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,28,61,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,94,61,50,14
+    LTEXT           "Width of zone to move :",IDC_SMOOTH1_STATIC1,17,10,78,8
+    LTEXT           "units",IDC_SMOOTH1_STATIC2,146,10,16,8
+    LTEXT           "Width of smoothing zone :",IDC_STATIC,17,30,84,8
+    LTEXT           "units",IDC_STATIC,146,30,16,8
+    LTEXT           "(1 block = ~50 units)",IDC_STATIC,106,46,67,9
+    COMBOBOX        IDC_EDIT2,103,28,38,48,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_EDIT1,103,8,38,48,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+IDD_TEXTURES DIALOGEX 0, 0, 244, 214
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "T3ED : Texture setup"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Select",IDOK,187,6,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,187,24,50,14
+    CONTROL         "",IDC_BITMAP,"Static",SS_BITMAP | SS_SUNKEN | WS_BORDER,
+                    7,55,177,152,WS_EX_STATICEDGE
+    LTEXT           "Bitmap",IDC_STATIC,37,39,22,8,0,WS_EX_TRANSPARENT
+    LTEXT           "Static",IDC_NUMBMP,123,39,26,10
+    EDITTEXT        IDC_EDIT1,63,37,32,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_HORZ | UDS_NOTHOUSANDS,7,37,23,11
+    LTEXT           "out of",IDC_STATIC,99,39,19,8
+    PUSHBUTTON      "&QFS File...",IDC_FILEOPEN,187,42,50,14
+    PUSHBUTTON      "&Properties...",IDC_HSPROPS,187,61,50,14,WS_DISABLED
+    LTEXT           "Label Text",ID_LABEL,10,5,165,25,NOT WS_GROUP
+END
+
+IDD_LOADING_QFS DIALOG DISCARDABLE  0, 0, 206, 31
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "T3ED : Please wait while loading textures..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,
+                    7,7,192,17
+END
+
+IDD_NEWOBJECT DIALOG DISCARDABLE  0, 0, 220, 135
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "T3ED : Creation of a new object"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,30,110,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,140,110,50,14
+    LTEXT           "Object type :",IDC_STATIC,7,7,41,8
+    CONTROL         "&Polygon object",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,15,21,63,10
+    CONTROL         "E&xtra object - Type : ",IDC_RADIO2,"Button",
+                    BS_AUTORADIOBUTTON,15,35,80,10
+    LTEXT           "Object chunk :",IDC_STATIC,10,50,48,8
+    CONTROL         "&0",IDC_CHUNK0,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    18,63,23,11
+    CONTROL         "&1",IDC_CHUNK1,"Button",BS_AUTORADIOBUTTON,49,63,23,11
+    CONTROL         "&2",IDC_CHUNK2,"Button",BS_AUTORADIOBUTTON,78,63,23,11
+    CONTROL         "&3",IDC_CHUNK3,"Button",BS_AUTORADIOBUTTON,108,63,23,11
+    LTEXT           "Polygon texture :",IDC_STATIC,10,84,54,8
+    EDITTEXT        IDC_EDIT1,67,82,28,12,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "&Browse...",IDC_BROWSE,102,82,50,14
+    COMBOBOX        IDC_COMBO_XOBJTYPE,105,35,95,50,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_POLYFLAGS DIALOG DISCARDABLE  0, 0, 202, 122
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "T3ED : Polygon Virtual Road Flags"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,47,101,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,105,101,50,14
+    CONTROL         "Wall collision detection (virtual road boundary)",
+                    IDC_CHECK1,"Button",BS_AUTO3STATE | WS_TABSTOP,7,7,160,
+                    10
+    CONTROL         "Extra-object collision detection",IDC_CHECK2,"Button",
+                    BS_AUTO3STATE | WS_TABSTOP,7,20,111,10
+    COMBOBOX        IDC_COMBO1,7,49,188,67,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Drive-over behavior",IDC_STATIC,7,39,63,8
+    CONTROL         "No forward neighbor",IDC_CHECK3,"Button",BS_AUTO3STATE | 
+                    WS_TABSTOP,7,69,80,10
+    CONTROL         "No backward neighbor",IDC_CHECK4,"Button",BS_AUTO3STATE | 
+                    WS_TABSTOP,107,69,88,10
+    CONTROL         "No left neighbour",IDC_CHECK5,"Button",BS_AUTO3STATE | 
+                    WS_TABSTOP,7,81,70,10
+    CONTROL         "No right neighbour",IDC_CHECK6,"Button",BS_AUTO3STATE | 
+                    WS_TABSTOP,107,82,74,10
+END
+
+IDD_CLEARTRACK DIALOG DISCARDABLE  0, 0, 205, 196
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "T3ED : Clear All..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,148,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,148,24,50,14
+    CONTROL         "Track shape (XY)",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,7,131,10
+    CONTROL         "Road elevations",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,21,131,10
+    CONTROL         "Scenery elevations",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,35,131,10
+    CONTROL         "Polygon objects && light sources",IDC_CHECK4,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,64,131,10
+    CONTROL         "Extra objects",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,79,131,10
+    CONTROL         "Road textures : set to",IDC_CHECK6,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,107,95,10
+    EDITTEXT        IDC_EDIT6,104,105,28,12,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "&Browse...",IDC_BROWSE6,139,105,50,14
+    CONTROL         "Scenery textures : set to",IDC_CHECK7,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,124,95,10
+    EDITTEXT        IDC_EDIT7,103,123,28,12,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "&Browse...",IDC_BROWSE7,139,123,50,14
+    CONTROL         "Lanes, fences && sound sources",IDC_CHECK8,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,50,131,10
+    CONTROL         "Global animated objects (can't undo)",IDC_CHECK9,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,93,131,10
+    CONTROL         "Cut FRD-file to Blocks:",IDC_CHECK10,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,142,95,10
+    EDITTEXT        IDC_EDIT8,103,140,28,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Clear All Shading Values. (No Shadows, excl. xtra objs.)",
+                    IDC_CHECK11,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,156,
+                    191,10
+    LTEXT           "(can't undo, needs additional work)",IDC_STATIC,138,138,
+                    60,19
+    CONTROL         "Set default block neighbours",IDC_CHECK13,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,171,191,10
+END
+
+IDD_TEXTUREPROPS DIALOG DISCARDABLE  0, 0, 163, 174
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "NFSHS Texture Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,153,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,106,153,50,14
+    GROUPBOX        "Rotation",IDC_STATIC,7,7,149,27
+    CONTROL         "None",IDC_ROTNONE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,13,18,33,10
+    CONTROL         "90°",IDC_ROT90,"Button",BS_AUTORADIOBUTTON,51,18,27,10
+    CONTROL         "180°",IDC_ROT180,"Button",BS_AUTORADIOBUTTON,83,18,31,
+                    10
+    CONTROL         "270°",IDC_ROT270,"Button",BS_AUTORADIOBUTTON,120,18,31,
+                    10
+    GROUPBOX        "Tiling",IDC_STATIC,7,41,149,52
+    CONTROL         "None",IDC_TILINGNONE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,13,53,33,10
+    CONTROL         "Horizontal x2",IDC_TILINGHOR2,"Button",
+                    BS_AUTORADIOBUTTON,13,65,57,10
+    CONTROL         "Vertical x2",IDC_TILINGVERT2,"Button",
+                    BS_AUTORADIOBUTTON,13,78,49,10
+    CONTROL         "Horizontal x4",IDC_TILINGHOR4,"Button",
+                    BS_AUTORADIOBUTTON,85,66,57,10
+    CONTROL         "Vertical x4",IDC_TILINGVERT4,"Button",
+                    BS_AUTORADIOBUTTON,85,78,49,10
+    CONTROL         "Flip Horizontal",IDC_FLIPH,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,13,98,60,10
+    CONTROL         "Flip Vertical",IDC_FLIPV,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,95,99,52,10
+    CONTROL         "Two-Sided",IDC_TWOSIDED,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,57,113,50,10
+    CONTROL         "Animated",IDC_ANIMTEX,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,13,137,45,10
+    EDITTEXT        IDC_ANIMLENGTH,59,135,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ANIMDURATION,103,135,40,14,ES_AUTOHSCROLL
+    LTEXT           "Frames (2-7)",IDC_STATIC,59,126,40,8
+    LTEXT           "Duration",IDC_STATIC,104,126,28,8
+END
+
+IDD_ADJUSTVR DIALOG DISCARDABLE  0, 0, 248, 137
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "T3ED : Virtual Road Adjust Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,192,116,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,8,116,50,14
+    CONTROL         "Old Denis' Method with a small fix.",IDC_RADIO5,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,14,18,122,11
+    CONTROL         "New Method 1: uses virtual road boundaries to set up VR",
+                    IDC_RADIO6,"Button",BS_AUTORADIOBUTTON | WS_GROUP,14,34,
+                    219,12
+    CONTROL         "New Method 2: uses Virtual Road Edge Flags.",IDC_RADIO7,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,14,52,212,10
+    GROUPBOX        "Adjust Method",IDC_ADJUSTMETHOD,7,7,231,77,WS_GROUP
+    CONTROL         "Map Lane Edges, Instead of Virtual Road Boundaries",
+                    IDC_CHECK1,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | 
+                    WS_TABSTOP,14,88,183,10
+    EDITTEXT        IDC_EDIT1,60,99,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,148,99,40,14,ES_AUTOHSCROLL
+    LTEXT           "Start Block:",IDC_STATIC,22,102,38,8
+    LTEXT           "End Block:",IDC_STATIC,112,102,36,8
+    EDITTEXT        IDC_EDIT3,82,68,64,12,ES_AUTOHSCROLL
+    CONTROL         "Set manual to :",IDC_RADIO8,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,14,68,62,10
+END
+
+IDD_BLOCKPASTE DIALOG DISCARDABLE  0, 0, 212, 273
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "T3ED : Paste block"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,34,240,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,129,240,50,14
+    CONTROL         "Add block as new last block. (can't undo)",
+                    IDC_RADIO_ADD_REPLACE1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,10,5,170,10
+    CONTROL         "Add before selected. (can't undo)",
+                    IDC_RADIO_ADD_REPLACE2,"Button",BS_AUTORADIOBUTTON,10,38,
+                    188,10
+    CONTROL         "Replace selected block.",IDC_RADIO_ADD_REPLACE3,"Button",
+                    BS_AUTORADIOBUTTON,10,52,165,10
+    CONTROL         "Paste block and objects",IDC_CHECK_PASTEBLOCK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,67,135,10
+    CONTROL         "Paste heights.sim data",IDC_CHECK_PASTEHEIGHTS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,172,135,10
+    CONTROL         "Paste spdfa.bin data",IDC_CHECK_PASTESPDFA,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,187,135,10
+    CONTROL         "Paste spdra.bin data",IDC_CHECK_PASTESPDRA,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,202,135,10
+    CONTROL         "Paste vroad points",IDC_CHECK_PASTEVROAD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,55,82,140,10
+    CONTROL         "Move block to original position",IDC_CHECK_MOVE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,55,97,135,10
+    CONTROL         "Move z - axis",IDC_CHECK_MOVEZ,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,55,113,135,10
+    CONTROL         "Rotate block",IDC_CHECK_ROTATE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,55,127,140,10
+    CONTROL         "Expand lenght to fit",IDC_CHECK_EXPAND_LENGHT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,55,142,140,10
+    CONTROL         "Expand width to fit",IDC_CHECK_EXPAND_WIDTH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,55,158,140,10
+    LTEXT           "Heights.sim, spdfa.bin and spdra.bin data will be added if thoose files were loaded.",
+                    IDC_STATIC,22,17,158,18,NOT WS_GROUP
+    CONTROL         "Replace only track texture information",
+                    IDC_RADIO_ADD_REPLACE4,"Button",BS_AUTORADIOBUTTON,10,
+                    220,165,10
+END
+
+IDD_OBJPOLYPROPS DIALOG DISCARDABLE  0, 0, 186, 141
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "T3ED : Polygon Object Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,35,115,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,100,115,50,14
+    RTEXT           "Belongs to block :",IDC_STATIC,5,10,100,15
+    EDITTEXT        IDC_EDIT_BLOCK,115,10,45,15,ES_AUTOHSCROLL | WS_DISABLED | 
+                    NOT WS_TABSTOP
+    RTEXT           "Object Number :",IDC_STATIC,5,50,100,15
+    EDITTEXT        IDC_EDIT_OBJNUM,115,50,45,15,ES_AUTOHSCROLL | 
+                    WS_DISABLED | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_NUMPOLY,115,70,45,15,ES_AUTOHSCROLL | 
+                    WS_DISABLED | NOT WS_TABSTOP
+    RTEXT           "Number of polygons :",IDC_STATIC,10,70,95,15
+    EDITTEXT        IDC_EDIT_CHUNK,115,30,45,15,ES_AUTOHSCROLL | WS_DISABLED | 
+                    NOT WS_TABSTOP
+    RTEXT           "Stored in Chunk :",IDC_STATIC,5,30,100,15
+    CONTROL         "Convert to Extra Object : ",IDC_CHECK_CONVERT,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | WS_TABSTOP,10,
+                    90,115,15
+END
+
+IDD_EXTRAOBJPROPS DIALOG DISCARDABLE  0, 0, 327, 290
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "T3ED : Extra Object Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,115,269,45,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,170,269,45,14
+    RTEXT           "Belongs to block :",IDC_STATIC,5,45,89,15
+    EDITTEXT        IDC_EDIT_BLOCK,106,45,60,12,ES_AUTOHSCROLL | WS_DISABLED | 
+                    NOT WS_TABSTOP
+    RTEXT           "Object number :",IDC_STATIC,5,63,89,15
+    EDITTEXT        IDC_EDIT_OBJNUM,106,64,60,12,ES_AUTOHSCROLL | 
+                    WS_DISABLED | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_NUMPOLY,256,65,48,15,ES_AUTOHSCROLL | 
+                    WS_DISABLED | NOT WS_TABSTOP
+    RTEXT           "Number of polygons :",IDC_STATIC,175,65,70,15
+    EDITTEXT        IDC_EDIT_CHUNK,256,45,48,15,ES_AUTOHSCROLL | WS_DISABLED | 
+                    NOT WS_TABSTOP
+    RTEXT           "Stored in chunk :",IDC_STATIC,180,45,65,15
+    RTEXT           "Crosstype : ",IDC_TXT_CROSSTYPE,55,117,38,15,
+                    SS_CENTERIMAGE
+    RTEXT           "Unknown 1 : ",IDC_TXT_REFX_UK1,15,160,48,15
+    COMBOBOX        IDC_COMBO_CROSSTYPE,105,121,60,50,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_REFX_UK1,75,160,48,15,ES_AUTOHSCROLL | 
+                    WS_DISABLED | NOT WS_TABSTOP
+    RTEXT           "Object Refpoint position  X :",IDC_STATIC,5,5,89,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_X,106,5,54,15,ES_AUTOHSCROLL | WS_DISABLED | 
+                    NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_Y,176,5,48,15,ES_AUTOHSCROLL | WS_DISABLED | 
+                    NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_Z,240,5,48,15,ES_AUTOHSCROLL | WS_DISABLED | 
+                    NOT WS_TABSTOP
+    RTEXT           "Y :",IDC_STATIC,160,5,10,12,SS_CENTERIMAGE
+    RTEXT           "Z :",IDC_STATIC,224,5,10,12,SS_CENTERIMAGE
+    GROUPBOX        "REFXOBJ Data :",IDC_GROUP_REFXOBJ,10,140,120,105
+    RTEXT           "Unknown 2 : ",IDC_TXT_REFX_UK2,15,184,48,15
+    EDITTEXT        IDC_EDIT_REFX_UK2,75,184,48,15,ES_AUTOHSCROLL | 
+                    WS_DISABLED | NOT WS_TABSTOP
+    RTEXT           "Collide effect : ",IDC_TXT_REFX_UK3,15,210,48,15
+    EDITTEXT        IDC_EDIT_REFX_UK3,75,210,48,15,ES_AUTOHSCROLL | 
+                    WS_DISABLED | NOT WS_TABSTOP
+    RTEXT           "Unknown :",IDC_TXT_XOBJ_UK,5,81,89,15
+    EDITTEXT        IDC_EDIT_XOBJ_UK,106,83,60,12,ES_AUTOHSCROLL | 
+                    WS_DISABLED | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_XOBJ_ANIM_MEM,256,85,48,15,ES_AUTOHSCROLL | 
+                    ES_READONLY | WS_DISABLED | NOT WS_TABSTOP
+    RTEXT           "Animation Memory :",IDC_TXT_XOBJ_ANIM_MEM,175,85,70,15
+    CONTROL         "Change Refpoint",IDC_CHECK_RECENTER,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | WS_TABSTOP,5,
+                    20,69,20
+    COMBOBOX        IDC_COMBO_RECENTER,106,25,123,50,CBS_DROPDOWNLIST | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Convert to Polygon Object : ",IDC_CHECK_CONVERT_POLY,
+                    "Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | 
+                    WS_TABSTOP,50,250,105,15
+    GROUPBOX        "AnimData :",IDC_GROUP_ANIMDATA,135,140,185,105
+    EDITTEXT        IDC_EDIT_ANIM_X,140,166,50,15,ES_AUTOHSCROLL | ES_NUMBER
+    CTEXT           "Pos. X :",IDC_TXT_ANIM_X,140,151,40,13,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_ANIM_Y,195,166,55,15,ES_AUTOHSCROLL
+    CTEXT           "Pos. Y :",IDC_TXT_ANIM_Y,202,151,40,13,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_ANIM_Z,255,166,49,15,ES_AUTOHSCROLL
+    CTEXT           "Pos. Z :",IDC_TXT_ANIM_Z,264,151,45,13,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_ANIM_M1,140,201,40,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CTEXT           "Multi 1 :",IDC_TXT_ANIM_M1,140,186,40,13,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_ANIM_M3,230,201,40,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CTEXT           "Multi 3 :",IDC_TXT_ANIM_M3,230,186,40,13,SS_CENTERIMAGE
+    RTEXT           "Animationdata Nr : ",IDC_TXT_ANIML,183,124,61,15,
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_ANIML,255,124,51,91,CBS_DROPDOWNLIST | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_XOBJ_ANIMDELAY,256,105,48,15,ES_AUTOHSCROLL | 
+                    WS_DISABLED | NOT WS_TABSTOP
+    RTEXT           "Animation Delay :",IDC_TXT_XOBJ_ANIMDELAY,175,105,70,15
+    PUSHBUTTON      "Export",IDC_BUTTON_ANIM_EXPORT,165,220,45,15
+    PUSHBUTTON      "Import",IDC_BUTTON_ANIM_IMPORT,245,220,45,15
+    EDITTEXT        IDC_EDIT_ANIM_M2,185,201,40,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CTEXT           "Multi 2 :",IDC_TXT_ANIM_M2,185,185,40,13,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_ANIM_M4,275,201,40,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CTEXT           "Multi 4 :",IDC_TXT_ANIM_M4,275,185,40,13,SS_CENTERIMAGE
+    RTEXT           "Unknown 3 :",IDC_TXT_XOBJ_UK3,5,99,89,15,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_XOBJ_UK3,106,102,60,91,CBS_DROPDOWN | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "0 - nothing, 1 - solid (trees, walls)   2 - Hit && fall (signs)",
+                    IDC_STATIC,15,225,110,15
+    CONTROL         "Convert to Global Object : ",IDC_CHECK_CONVERT_GLOBAL,
+                    "Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | 
+                    WS_TABSTOP,165,250,105,15
+END
+
+IDD_MOVETO DIALOG DISCARDABLE  0, 0, 167, 156
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "T3ED : Move to position"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,15,135,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,100,135,50,14
+    GROUPBOX        "Distance : ",IDC_STATIC,10,5,150,85
+    RTEXT           "X : ",IDC_STATIC,20,20,30,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDITX,55,20,60,15,ES_AUTOHSCROLL
+    RTEXT           "Y : ",IDC_STATIC,20,40,30,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDITY,55,40,60,15,ES_AUTOHSCROLL
+    RTEXT           "Z : ",IDC_STATIC,20,60,30,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDITZ,55,60,60,15,ES_AUTOHSCROLL
+    CONTROL         "No (extra-) smoothing",IDC_CHECKNOSMOOTH,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,20,95,105,15
+    EDITTEXT        IDC_EDIT_ENDBLOCK,130,110,30,15,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "End Block :",IDC_TXT_ENDBLOCK,90,115,40,10,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDIT_STARTBLOCK,50,110,30,15,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "Start Block :",IDC_TXT_STARTBLOCK,10,115,40,10,NOT 
+                    WS_VISIBLE
+END
+
+IDD_SET_VISI DIALOG DISCARDABLE  0, 0, 186, 177
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set Visibility"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,10,146,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,126,146,50,14
+    CONTROL         "Actual block",IDC_TRBLFROMTO1,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,8,40,168,14
+    CONTROL         "From start block to end block",IDC_TRBLFROMTO2,"Button",
+                    BS_AUTORADIOBUTTON,8,64,168,14
+    CONTROL         "Whole track",IDC_TRBLFROMTO3,"Button",
+                    BS_AUTORADIOBUTTON,8,108,168,14
+    RTEXT           "View distance (blocks) :",IDC_STATIC,10,6,104,14
+    EDITTEXT        IDC_EDIT_NUMBLOCKS,122,6,54,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    RTEXT           "Start :",IDC_STATIC,22,86,38,12
+    EDITTEXT        IDC_EDIT_START,66,86,28,14,ES_AUTOHSCROLL
+    RTEXT           "End :",IDC_STATIC,104,86,38,12
+    EDITTEXT        IDC_EDIT_END,148,86,28,14,ES_AUTOHSCROLL
+    GROUPBOX        "Apply to : ",IDC_STATIC,4,30,176,106
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ROTATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 54
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        VERTGUIDE, 32
+        VERTGUIDE, 166
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_TRKBLOCK_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 215
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_LSPROPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 139
+    END
+
+    IDD_LOD_GENERATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 248
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 18
+    END
+
+    IDD_RAYTRACE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 142
+    END
+
+    IDD_SMOOTHING1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 96
+    END
+
+    IDD_SMOOTHING2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 173
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_TEXTURES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 237
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 207
+    END
+
+    IDD_LOADING_QFS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 199
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 24
+    END
+
+    IDD_NEWOBJECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 213
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_POLYFLAGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 115
+    END
+
+    IDD_CLEARTRACK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 198
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_TEXTUREPROPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 156
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+
+    IDD_ADJUSTVR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 241
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+
+    IDD_BLOCKPASTE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 266
+    END
+
+    IDD_OBJPOLYPROPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 134
+    END
+
+    IDD_EXTRAOBJPROPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 320
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 283
+    END
+
+    IDD_MOVETO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 160
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 149
+    END
+
+    IDD_SET_VISI, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\T3ED.ico"
+IDR_T3EDTYPE            ICON    DISCARDABLE     "res\\T3EDDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+IDB_BACKIMAGE           BITMAP  DISCARDABLE     "res\\backimag.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_VIEW_ZOOMIN
+    BUTTON      ID_VIEW_ZOOMOUT
+    BUTTON      ID_VIEW_HEIGHT
+    BUTTON      ID_VIEW_ROTATE
+    SEPARATOR
+    BUTTON      ID_VIEW_SHOWTRACK
+    SEPARATOR
+    BUTTON      ID_MODE_BLOCK
+    BUTTON      ID_MODE_POINT
+    BUTTON      ID_MODE_EXTPOINT
+    BUTTON      ID_MODE_OBJECT
+    BUTTON      ID_MODE_POLYGON
+    BUTTON      ID_MODE_VROADEDIT
+    SEPARATOR
+    BUTTON      ID_EDIT_UNDO
+    SEPARATOR
+    BUTTON      ID_TOOLS_MOVEXY
+    BUTTON      ID_TOOLS_MOVEZ
+    BUTTON      ID_TOOLS_TEXTURE
+    BUTTON      ID_TOOLS_DELETE
+    BUTTON      ID_TOOLS_DUPLICATE
+    BUTTON      ID_TOOLS_MERGE
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+    BUTTON      ID_CONTEXT_HELP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Properies",                   ID_FILE_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "Undo, but keep VRoad",        ID_EDIT_UNDO_KEEP_VR
+        MENUITEM SEPARATOR
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "Find\tCtrl+F",                ID_EDIT_FIND
+        MENUITEM "&Merge\tCtrl+M",              ID_EDIT_MERGE
+        MENUITEM "&Delete\tDel",                ID_TOOLS_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "Copy Z\tShift+A",             ID_COPY_Z
+        MENUITEM "Paste\tShift+Q",              ID_Paste_Zh
+        POPUP "Paste Mode\tW"
+        BEGIN
+            MENUITEM "Normal (z)",                  ID_EDIT_PASTE_NORMAL
+            , CHECKED
+            MENUITEM "Shader (z)",                  ID_EDIT_PASTE_SHADER
+            MENUITEM "Average  (z)",                ID_EDIT_PASTE_AVERAGE
+            MENUITEM "Line up (x,y)",               ID_EDIT_PASTE_LINE_XY
+            MENUITEM "Line up (x,y,z)",             ID_EDIT_PASTE_LINE_XYZ
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Copy X && Y\tCtrl Y",         ID_EDIT_COPY_XY
+        MENUITEM "Paste X && Y\tShift Y",       ID_EDIT_PASTE_XY
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Toolbar",                     ID_VIEW_TOOLBAR
+        MENUITEM "Status Bar",                  ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "Zoom &In\tAlt+PgDn or Mousewheel", ID_VIEW_ZOOMIN
+        MENUITEM "Zoom &Out\tAlt+PgUp or Mousewheel", ID_VIEW_ZOOMOUT
+        MENUITEM SEPARATOR
+        MENUITEM "&Translation Mode\tF9",       ID_VIEW_HEIGHT
+        MENUITEM "&Rotation Mode\tAlt+F9",      ID_VIEW_ROTATE
+        MENUITEM SEPARATOR
+        POPUP "R&esolution"
+        BEGIN
+            MENUITEM "&Full\tAlt+1",                ID_VIEW_FULLRES
+            MENUITEM "&Half\tAlt+2",                ID_VIEW_HALFRES
+            MENUITEM "&Low\tAlt+3",                 ID_VIEW_LOWRES
+        END
+        MENUITEM "&Show Objects",               ID_VIEW_SHOWHIDEOBJECTS
+        MENUITEM "Show &Lanes",                 ID_VIEW_SHOWLANES
+        MENUITEM SEPARATOR
+        MENUITEM "Show Track &View",            ID_VIEW_SHOWTRACK
+        MENUITEM "   Zoom In Trackview\tCtrl + Mousewheel", ID_VIEW_ZOOMIN3D
+        MENUITEM "   Zoom Out Trackview\tCtrl + Mousewheel", 
+                                                ID_VIEW_ZOOMOUT3D
+        MENUITEM SEPARATOR
+        MENUITEM "Show Virtual Road Bitmap Data Mode", ID_VIRROADBITMAP
+        MENUITEM SEPARATOR
+        MENUITEM "Show Track Based On Visibility", ID_VIEW_VISIBILITY
+        MENUITEM "Show Current Block Highlighted", ID_VIEW_EDITBLOCK
+        MENUITEM "Show Poly Flags Color Coded", ID_VIEW_POLYFLAG
+        POPUP "Select Poly Flag for Color Coding "
+        BEGIN
+            MENUITEM "Virtual Road Boundary Polygons", ID_VIRTUALROADMASK
+            MENUITEM "Virtual Driving Road Edge Polygons", 
+                                                    ID_VIRTUALROADEDGEMASK
+            MENUITEM SEPARATOR
+            MENUITEM "Non Passable Polygons",       ID_NONPASSABLEPOLYGONMASK
+
+        END
+        MENUITEM "Show Virtual Road Width and Node Points", ID_VIEW_VROAD
+        MENUITEM SEPARATOR
+        MENUITEM "Re-&center\tHome",            ID_VIEW_RECENTER
+        MENUITEM "Re&fresh",                    ID_VIEW_REFRESH
+        MENUITEM "Show selected Object normals", ID_VIEW_NORMALS
+    END
+    POPUP "Edit-&Modes"
+    BEGIN
+        MENUITEM "&Block\tCtrl+1",              ID_MODE_BLOCK
+        MENUITEM "&Point\tCtrl+2",              ID_MODE_POINT
+        MENUITEM "&Xtended Point\tCtrl+3",      ID_MODE_EXTPOINT
+        MENUITEM "&Object\tCtrl+4",             ID_MODE_OBJECT
+        MENUITEM "Pol&ygon\tCtrl+5",            ID_MODE_POLYGON
+        MENUITEM "Edit Virtual Road Points",    ID_MODE_VROADEDIT
+        MENUITEM SEPARATOR
+        MENUITEM "Automatic object membership", ID_EDITMODES_AUTOOBJMEMBER
+        MENUITEM SEPARATOR
+        MENUITEM "&Smoothing...\tAlt+S",        ID_MODE_SMOOTHING
+        MENUITEM "&Extra Smoothing",            ID_EDITMODES_EXTRASMOOTHING
+    END
+    POPUP "Edit-&Tools"
+    BEGIN
+        MENUITEM "Enter move distance",         ID_TOOLS_MOVETO
+        MENUITEM "Move &XY...",                 ID_TOOLS_MOVEXY
+        MENUITEM "Move &Z...",                  ID_TOOLS_MOVEZ
+        MENUITEM SEPARATOR
+        MENUITEM "&Expand / Shrink\tCtrl+E",    ID_TOOLS_EXPAND
+        MENUITEM "&Invert\tCtrl+I",             ID_TOOLS_INVERT
+        MENUITEM "&Merge/Split...",             ID_TOOLS_MERGE
+        MENUITEM "&New/Duplicate\tCtrl+N",      ID_TOOLS_DUPLICATE
+        MENUITEM "Rotate \tCtrl+R",             ID_TOOLS_ROTATE
+        MENUITEM SEPARATOR
+        MENUITEM "Adjust road width",           ID_TOOLS_ADJUSTWIDTH
+        MENUITEM "Virtual Road, heights, spdfa && spdra\tCtrl+H", 
+                                                ID_TOOLS_VROAD_HEIGHTS_SPDFILES
+
+        MENUITEM "Erase all...",                ID_TOOLS_CLEARALL
+        MENUITEM "Polygon &flags...\tCtrl+Enter", ID_TOOLS_POLYFLAG
+        MENUITEM "&Properties...\tAlt+Enter",   ID_TOOLS_PROPERTIES
+        MENUITEM "&Texture...\tCtrl+T",         ID_TOOLS_TEXTURE
+        POPUP "Visibility"
+        BEGIN
+            MENUITEM "Set visibility",              ID_SET_VIS
+            MENUITEM "Export visibility data to visibility.txt", 
+                                                    ID_EXPORT_VIS
+            MENUITEM "Import visibility data from visibility.txt", 
+                                                    ID_IMPORT_VIS
+            POPUP "Forward direction"
+            BEGIN
+                MENUITEM "Increase \tPage Up",          ID_VIS_FW_INCREASE
+                MENUITEM "Decrease \tPage Down",        ID_VIS_FW_DECREASE
+            END
+            POPUP "Backward Direction"
+            BEGIN
+                MENUITEM "Increase\tAlt + Page Up",     ID_VIS_BW_INCREASE
+                MENUITEM "Decrease\tAlt + Page Down",   ID_VIS_BW_DECREASE
+            END
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Block Neighbours...",         ID_Tools_Neighbours
+        POPUP "Export"
+        BEGIN
+            MENUITEM "Track Vertices to Vertices.txt", ID_EXPORT_TRKVERTICES
+            MENUITEM "Texture values to Textures.txt", ID_EXPORT_TEXTURE
+            MENUITEM "Export Object",               ID_EXPORT_OBJECT
+        END
+        POPUP "Import"
+        BEGIN
+            MENUITEM "Texture values from Textures.txt", ID_IMPORT_TEXTURE
+            MENUITEM "Import Object",               ID_IMPORT_OBJECT
+        END
+        MENUITEM "Generate LODS (Experimental)", ID_TOOLS_LODGEN
+        MENUITEM "Shadow Raytracer",            ID_TOOLS_SHADOWRAYTRACER
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About T3ED...",              ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "1",            ID_MODE_BLOCK,          VIRTKEY, CONTROL, NOINVERT
+    "1",            ID_VIEW_FULLRES,        VIRTKEY, ALT, NOINVERT
+    "2",            ID_MODE_POINT,          VIRTKEY, CONTROL, NOINVERT
+    "2",            ID_VIEW_HALFRES,        VIRTKEY, ALT, NOINVERT
+    "3",            ID_MODE_EXTPOINT,       VIRTKEY, CONTROL, NOINVERT
+    "3",            ID_VIEW_LOWRES,         VIRTKEY, ALT, NOINVERT
+    "4",            ID_MODE_OBJECT,         VIRTKEY, CONTROL, NOINVERT
+    "5",            ID_MODE_POLYGON,        VIRTKEY, CONTROL, NOINVERT
+    "A",            ID_COPY_Zl,             VIRTKEY, NOINVERT
+    "A",            ID_COPY_Zh,             VIRTKEY, SHIFT, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "D",            ID_TOOLS_DUPLICATE,     VIRTKEY, CONTROL, NOINVERT
+    "E",            ID_TOOLS_EXPAND,        VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    "H",            ID_TOOLS_VROAD_HEIGHTS_SPDFILES, VIRTKEY, CONTROL, 
+                                                    NOINVERT
+    "I",            ID_TOOLS_INVERT,        VIRTKEY, CONTROL, NOINVERT
+    "M",            ID_EDIT_MERGE,          VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_TOOLS_DUPLICATE,     VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "Q",            ID_PASTE_Zl,            VIRTKEY, NOINVERT
+    "Q",            ID_Paste_Zh,            VIRTKEY, SHIFT, NOINVERT
+    "R",            ID_TOOLS_ROTATE,        VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_MODE_SMOOTHING,      VIRTKEY, ALT, NOINVERT
+    "T",            ID_TOOLS_TEXTURE,       VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_TOOLS_DELETE,        VIRTKEY, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    VK_F9,          ID_VIEW_HEIGHT,         VIRTKEY, NOINVERT
+    VK_F9,          ID_VIEW_ROTATE,         VIRTKEY, ALT, NOINVERT
+    VK_HOME,        ID_VIEW_RECENTER,       VIRTKEY, NOINVERT
+    VK_MULTIPLY,    ID_CORDINATES,          VIRTKEY, CONTROL, NOINVERT
+    VK_NEXT,        ID_VIS_FW_DECREASE,     VIRTKEY, NOINVERT
+    VK_NEXT,        ID_VIS_BW_DECREASE,     VIRTKEY, ALT, NOINVERT
+    VK_PRIOR,       ID_VIS_FW_INCREASE,     VIRTKEY, NOINVERT
+    VK_PRIOR,       ID_VIS_BW_INCREASE,     VIRTKEY, ALT, NOINVERT
+    VK_RETURN,      ID_TOOLS_POLYFLAG,      VIRTKEY, CONTROL, NOINVERT
+    VK_RETURN,      ID_TOOLS_PROPERTIES,    VIRTKEY, ALT, NOINVERT
+    "W",            ID_COPY_MODE,           VIRTKEY, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Y",            ID_COPY_XY,             VIRTKEY, CONTROL, NOINVERT
+    "Y",            ID_PASTE_XY,            VIRTKEY, SHIFT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,0,7,0
+ PRODUCTVERSION 4,0,0,214
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "T3ED MFC Application\0"
+            VALUE "FileVersion", "0, 0, 7, 0\0"
+            VALUE "InternalName", "T3ED\0"
+            VALUE "LegalCopyright", "Copyright (C) 1998 - 2015\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "T3ED.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "T3ED Application\0"
+            VALUE "ProductVersion", "4, 0, 0, 214\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_MOVE                CURSOR  DISCARDABLE     "res\\cur00001.cur"
+IDC_ROTATE              CURSOR  DISCARDABLE     "res\\cursor1.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_SMOOTHING1 DLGINIT
+BEGIN
+    IDC_EDIT2, 0x403, 3, 0
+0x3031, "\000" 
+    IDC_EDIT2, 0x403, 3, 0
+0x3032, "\000" 
+    IDC_EDIT2, 0x403, 3, 0
+0x3033, "\000" 
+    IDC_EDIT2, 0x403, 3, 0
+0x3034, "\000" 
+    IDC_EDIT2, 0x403, 3, 0
+0x3036, "\000" 
+    IDC_EDIT2, 0x403, 3, 0
+0x3038, "\000" 
+    IDC_EDIT2, 0x403, 4, 0
+0x3031, 0x0030, 
+    IDC_EDIT2, 0x403, 4, 0
+0x3032, 0x0030, 
+    IDC_EDIT2, 0x403, 4, 0
+0x3035, 0x0030, 
+    IDC_EDIT1, 0x403, 2, 0
+0x0031, 
+    IDC_EDIT1, 0x403, 2, 0
+0x0034, 
+    IDC_EDIT1, 0x403, 2, 0
+0x0038, 
+    IDC_EDIT1, 0x403, 3, 0
+0x3231, "\000" 
+    IDC_EDIT1, 0x403, 3, 0
+0x3032, "\000" 
+    IDC_EDIT1, 0x403, 3, 0
+0x3035, "\000" 
+    0
+END
+
+IDD_SMOOTHING2 DLGINIT
+BEGIN
+    IDC_EDIT2, 0x403, 3, 0
+0x3531, "\000" 
+    IDC_EDIT2, 0x403, 3, 0
+0x3532, "\000" 
+    IDC_EDIT2, 0x403, 3, 0
+0x3035, "\000" 
+    IDC_EDIT2, 0x403, 4, 0
+0x3031, 0x0030, 
+    IDC_EDIT1, 0x403, 2, 0
+0x0030, 
+    IDC_EDIT1, 0x403, 2, 0
+0x0035, 
+    IDC_EDIT1, 0x403, 3, 0
+0x3031, "\000" 
+    IDC_EDIT1, 0x403, 3, 0
+0x3032, "\000" 
+    0
+END
+
+IDD_POLYFLAGS DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 44, 0
+0x2020, 0x2030, 0x203a, 0x4f4e, 0x5244, 0x5649, 0x5f45, 0x5553, 0x4652, 
+0x4341, 0x2045, 0x4e28, 0x746f, 0x7020, 0x7361, 0x6173, 0x6c62, 0x2865, 
+0x6e49, 0x656e, 0x2972, 0x0029, 
+    IDC_COMBO1, 0x403, 20, 0
+0x2020, 0x2031, 0x203a, 0x4150, 0x4556, 0x5f44, 0x5553, 0x4652, 0x4341, 
+0x0045, 
+    IDC_COMBO1, 0x403, 21, 0
+0x2020, 0x2032, 0x203a, 0x5247, 0x5641, 0x4c45, 0x535f, 0x5255, 0x4146, 
+0x4543, "\000" 
+    IDC_COMBO1, 0x403, 20, 0
+0x2020, 0x2033, 0x203a, 0x5247, 0x5341, 0x5f53, 0x5553, 0x4652, 0x4341, 
+0x0045, 
+    IDC_COMBO1, 0x403, 21, 0
+0x2020, 0x2034, 0x203a, 0x454c, 0x5641, 0x5345, 0x535f, 0x5255, 0x4146, 
+0x4543, "\000" 
+    IDC_COMBO1, 0x403, 19, 0
+0x2020, 0x2035, 0x203a, 0x4944, 0x5452, 0x535f, 0x5255, 0x4146, 0x4543, 
+"\000" 
+    IDC_COMBO1, 0x403, 20, 0
+0x2020, 0x2036, 0x203a, 0x4157, 0x4554, 0x5f52, 0x5553, 0x4652, 0x4341, 
+0x0045, 
+    IDC_COMBO1, 0x403, 19, 0
+0x2020, 0x2037, 0x203a, 0x4f57, 0x444f, 0x535f, 0x5255, 0x4146, 0x4543, 
+"\000" 
+    IDC_COMBO1, 0x403, 18, 0
+0x2020, 0x2038, 0x203a, 0x4349, 0x5f45, 0x5553, 0x4652, 0x4341, 0x0045, 
+
+    IDC_COMBO1, 0x403, 19, 0
+0x2020, 0x2039, 0x203a, 0x4e53, 0x574f, 0x535f, 0x5255, 0x4146, 0x4543, 
+"\000" 
+    IDC_COMBO1, 0x403, 20, 0
+0x3031, 0x3a20, 0x5020, 0x5641, 0x4445, 0x535f, 0x4f48, 0x4c55, 0x4544, 
+0x0052, 
+    IDC_COMBO1, 0x403, 21, 0
+0x3131, 0x3a20, 0x4c20, 0x4145, 0x4556, 0x5f53, 0x4853, 0x554f, 0x444c, 
+0x5245, "\000" 
+    IDC_COMBO1, 0x403, 19, 0
+0x3231, 0x3a20, 0x5720, 0x4f4f, 0x5f44, 0x4853, 0x554f, 0x444c, 0x5245, 
+"\000" 
+    IDC_COMBO1, 0x403, 19, 0
+0x3331, 0x3a20, 0x4420, 0x5249, 0x5f54, 0x4853, 0x554f, 0x444c, 0x5245, 
+"\000" 
+    IDC_COMBO1, 0x403, 44, 0
+0x3431, 0x3a20, 0x5320, 0x4d49, 0x554e, 0x4c4c, 0x535f, 0x5255, 0x4146, 
+0x4543, 0x2820, 0x6f4e, 0x2074, 0x6170, 0x7373, 0x6261, 0x656c, 0x2820, 
+0x756f, 0x6574, 0x2972, 0x0029, 
+    IDC_COMBO1, 0x403, 19, 0
+0x3531, 0x3a20, 0x5320, 0x4f4e, 0x5f57, 0x4853, 0x554f, 0x444c, 0x5245, 
+"\000" 
+    IDC_COMBO1, 0x403, 32, 0
+0x3631, 0x203a, 0x5320, 0x7275, 0x6166, 0x6563, 0x435f, 0x626f, 0x6c62, 
+0x2065, 0x4e28, 0x5346, 0x2034, 0x6e4f, 0x796c, 0x0029, 
+    IDC_COMBO1, 0x403, 33, 0
+0x3731, 0x203a, 0x5320, 0x6f68, 0x6c75, 0x6564, 0x5f72, 0x6f43, 0x6262, 
+0x656c, 0x2820, 0x464e, 0x3453, 0x4f20, 0x6c6e, 0x2979, "\000" 
+    IDC_COMBO1, 0x403, 32, 0
+0x3831, 0x203a, 0x5320, 0x7275, 0x6166, 0x6563, 0x535f, 0x6174, 0x7269, 
+0x2073, 0x4e28, 0x5346, 0x2034, 0x6e4f, 0x796c, 0x0029, 
+    IDC_COMBO1, 0x403, 33, 0
+0x3931, 0x203a, 0x5320, 0x6f68, 0x6c75, 0x6564, 0x5f72, 0x7453, 0x6961, 
+0x7372, 0x2820, 0x464e, 0x3453, 0x4f20, 0x6c6e, 0x2979, "\000" 
+    IDC_COMBO1, 0x403, 31, 0
+0x3032, 0x203a, 0x5320, 0x7275, 0x6166, 0x6563, 0x535f, 0x616c, 0x7362, 
+0x2820, 0x464e, 0x3453, 0x4f20, 0x6c6e, 0x2979, "\000" 
+    IDC_COMBO1, 0x403, 32, 0
+0x3132, 0x203a, 0x5320, 0x6f68, 0x6c75, 0x6564, 0x5f72, 0x6c53, 0x6261, 
+0x2073, 0x4e28, 0x5346, 0x2034, 0x6e4f, 0x796c, 0x0029, 
+    IDC_COMBO1, 0x403, 33, 0
+0x3232, 0x203a, 0x5320, 0x7275, 0x6166, 0x6563, 0x525f, 0x5452, 0x6172, 
+0x6b63, 0x2820, 0x464e, 0x3453, 0x4f20, 0x6c6e, 0x2979, "\000" 
+    IDC_COMBO1, 0x403, 35, 0
+0x3332, 0x203a, 0x5320, 0x6f68, 0x6c75, 0x646c, 0x7265, 0x525f, 0x5452, 
+0x6172, 0x6b63, 0x2820, 0x464e, 0x3453, 0x4f20, 0x6c6e, 0x2979, "\000" 
+    IDC_COMBO1, 0x403, 3, 0
+0x3432, "\000" 
+    IDC_COMBO1, 0x403, 3, 0
+0x3532, "\000" 
+    IDC_COMBO1, 0x403, 3, 0
+0x3632, "\000" 
+    IDC_COMBO1, 0x403, 3, 0
+0x3732, "\000" 
+    IDC_COMBO1, 0x403, 3, 0
+0x3832, "\000" 
+    IDC_COMBO1, 0x403, 3, 0
+0x3932, "\000" 
+    IDC_COMBO1, 0x403, 3, 0
+0x3033, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "T3ED\n\n\nNFS3/4 Track Files (*.frd)\n.frd\nT3ED.Document\nT3ED Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "T3ED"
+    AFX_IDS_IDLEMESSAGE     "For Help, press F1"
+    AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP_INDEX           "Opens Help\nHelp Topics"
+    ID_HELP_FINDER          "List Help topics\nHelp Topics"
+    ID_HELP_USING           "Display instructions about how to use help\nHelp"
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows\nHelp"
+    ID_HELP                 "Display help for current task or command\nHelp"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_ZOOMIN          "Zoom in\nZoom In"
+    ID_VIEW_ZOOMOUT         "Zoom out\nZoom Out"
+    ID_VIEW_ROTATE          "Use the scrollbars to rotate the view\nRotation Mode"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_HEIGHT          "Use the scrollbars to translate the view\nTranslation Mode"
+    ID_MODE_BLOCK           "Work on a whole track segment\nBlock mode"
+    ID_MODE_POINT           "Work on a single track node\nPoint mode"
+    ID_MODE_EXTPOINT        "Work on a single point with automatic smoothing\nXtended point mode"
+    ID_MODE_OBJECT          "Work on an object\nObject mode"
+    ID_MODE_POLYGON         "Work with a polygon\nPolygon mode"
+    ID_MODE_SMOOTHING       "Modify the smoothing parameters for block mode or extended point mode\nSmoothing..."
+    ID_TOOLS_MOVEXY         "Drag mouse to move objects along XY directions...\nMove XY"
+    ID_TOOLS_MOVEZ          "Drag mouse to move objects along Z axis...\nMove Z"
+    ID_TOOLS_TEXTURE        "View and modify the texture of polygons\nTexture"
+    ID_VIEW_FULLRES         "Sets display to full resolution mode"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_HALFRES         "Sets display to half resolution mode"
+    ID_VIEW_LOWRES          "Sets display to low resolution mode"
+    ID_VIEW_NODESONLY       "Display main nodes only rather than the whole grid"
+    ID_TOOLS_DELETE         "Delete an object or a polygon\nDelete"
+    ID_TOOLS_DUPLICATE      "Create or duplicate an object or a polygon (one copy will need to be moved)\nNew/Duplicate"
+    ID_TOOLS_PROPERTIES     "Displays selected object's properties\nProperties"
+    ID_VIEW_SHOWHIDEOBJECTS "Show or hide objects"
+    ID_VIEW_RECENTER        "Center view on the selected point"
+    ID_VIEW_REFRESH         "Redraw the screen contents"
+    ID_VIEW_SHOWLANES       "Show or hide the road lanes"
+    ID_EDITMODES_EXTRASMOOTHING 
+                            "Enables or disables extra smoothing for the move tools in block mode"
+    ID_TOOLS_MERGE          "Merge vertices or adjacent polygons by control-left-clicking, split vertices by right-clicking\nMerge/Split"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_BLOCKNUM   "Block 000"
+    ID_INDICATOR_SCROLLMODE "ROTATE"
+    ID_INDICATOR_CORDINATES "X:           Y:           Z:                       InMem Z:                                           "
+    ID_INDICATOR_PASTEMODE  "Normal"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_TOOLS_POLYFLAG       "Edit the virtual road flags of a track polygon"
+    ID_TOOLS_ADJUSTWIDTH    "Adjust virtual road width to get rid of the invisible walls on both sides of the track"
+    ID_TOOLS_CLEARALL       "Clear selectively track shape, elevations, objects and textures"
+    ID_VIEW_SHOWTRACK       "Show Track View"
+    ID_VIEW_VROAD           "Shows Virtual Road Boundaries. "
+    ID_EXPORT_VIS           "Exports Track's visibility table to visibility.txt"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_MODE_VROADEDIT       "Edit Virtual Road Points"
+    ID_VIEW_EDITBLOCK       "Highlights selected Block"
+    ID_VIEW_POLYFLAG        "shows polygons with virtual road boundary flag set as dark green"
+END
+
+#endif    // Englisch (USA) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Französisch (Frankreich) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\T3ED.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Französisch (Frankreich) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\T3ED.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

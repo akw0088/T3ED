@@ -1,0 +1,15 @@
+:Base T3ED.hlp
+1 Help Index=main_index
+1 Frequently Asked Questions=faqs
+1 Track file formats=nfs3specs
+1 How To...
+2 What's new ?=whats_new
+2 Download information=download_info
+2 NFS3 tracks overview=screen_info
+1 Menus
+2 File menu=menu_file
+2 View menu=menu_view
+2 Edit-Modes menu=menu_modes
+2 Edit-Tools menu=menu_tools
+2 Help menu=menu_help
+2 Toolbar=AFX_HIDW_TOOLBAR
